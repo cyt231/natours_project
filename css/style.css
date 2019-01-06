@@ -9,35 +9,38 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: 'Lato', sans-serif;
-  font-weight: 400;
-  /* font-size: 16px; */
-  line-height: 1.7;
-  color: #777;
   padding: 3rem;
   box-sizing: border-box; }
 
-.header {
-  height: 95vh;
-  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
-  background-position: top;
-  background-size: cover;
-  position: relative;
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 90vh);
-  /* Logo */
-  /* Headin g */ }
-  .header__logo-box {
-    position: absolute;
-    top: 4rem;
-    left: 4rem; }
-  .header__logo {
-    height: 3.5rem; }
-  .header__text-box {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center; }
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem); }
+  75% {
+    transform: translateX(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(10rem); }
+  75% {
+    transform: translateX(-1rem); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(5rem); }
+  75% {
+    transform: translateY(-0.5rem); }
+  100% {
+    opacity: 100%;
+    transform: translateY(0); } }
 
 .heading-primary {
   color: #fff;
@@ -61,25 +64,34 @@ body {
     letter-spacing: 1.75rem;
     animation: moveInRight 1s ease-in-out; }
 
-@keyframes moveInLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-10rem); }
-  75% {
-    transform: translateX(1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
+body {
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  /* font-size: 16px; */
+  line-height: 1.7;
+  color: #777; }
 
-@keyframes moveInRight {
-  0% {
-    opacity: 0;
-    transform: translateX(10rem); }
-  75% {
-    transform: translateX(-1rem); }
-  100% {
-    opacity: 1;
-    transform: translateX(0); } }
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/hero.jpg);
+  background-position: top;
+  background-size: cover;
+  position: relative;
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 90vh);
+  /* Logo */
+  /* Headin g */ }
+  .header__logo-box {
+    position: absolute;
+    top: 4rem;
+    left: 4rem; }
+  .header__logo {
+    height: 3.5rem; }
+  .header__text-box {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center; }
 
 .btn {
   /* BUTTON */ }
@@ -121,13 +133,3 @@ body {
   .btn--animated {
     animation: moveInBottom .5s ease-in-out .75s;
     animation-fill-mode: backwards; }
-
-@keyframes moveInBottom {
-  0% {
-    opacity: 0;
-    transform: translateY(5rem); }
-  75% {
-    transform: translateY(-0.5rem); }
-  100% {
-    opacity: 100%;
-    transform: translateY(0); } }
