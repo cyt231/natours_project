@@ -1,0 +1,23 @@
+{
+  "name": "natours-project",
+  "version": "1.0.0",
+  "description": "Lading page for Natours",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cyt231/natours_project.git"
+  },
+  "author": "Yoshio Tsuda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cyt231/natours_project/issues"
+  },
+  "homepage": "https://github.com/cyt231/natours_project#readme",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  },
+  "dependencies": {}
+}
