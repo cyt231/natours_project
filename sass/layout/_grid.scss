@@ -11,7 +11,6 @@
 
     // All class starting with "col-"
     [class^="col-"]{
-        background-color: orange;
         float:left;
 
         &:not(:last-child){
