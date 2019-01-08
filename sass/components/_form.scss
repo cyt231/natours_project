@@ -11,10 +11,11 @@
         padding: 1.5rem 2rem;
         border-radius: 3px;
         background-color: rgba($color-white, .9);
+        border:none;
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
-        border:none;
+        transition: all .3s;
 
         &:focus{
             outline: none;
@@ -45,5 +46,48 @@
         opacity:0;
         visibility:hidden;
         transform: translateY(-4rem);
+    }
+
+    &__radio-group{
+        width: 49%;
+        display:inline-block;
+    }
+    &__radio-input{
+        display: none;
+    }
+    &__radio-label{
+        font-size: $default-font-size;
+        cursor:pointer;
+        position:relative;
+        padding-left: 4rem;
+    }
+    &__radio-btn{
+        height: 3rem;
+        width:3rem;
+        border: 5px solid $color-primary;
+        border-radius: 50%;
+        display: inline-block;
+        position: absolute;
+        top:-.4rem;
+        left:0;
+
+        &::after{
+            content: "";
+            display: block;
+            border-radius: 50%;
+            height: 1.3rem;
+            width: 1.3rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-color: $color-primary;
+            opacity: 0;
+            transition: opacity .2s;
+        }
+    }
+
+    &__radio-input:checked ~ &__radio-label &__radio-btn::after {
+        opacity: 1;
     }
 }
