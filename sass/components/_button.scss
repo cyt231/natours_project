@@ -8,7 +8,7 @@
         padding: 1.5rem 4rem;
         border-radius: 3.5rem;
         display:inline-block;
-        transition: all 0.5s;
+        transition: all 0.3s;
         position: relative;
         font-size: $default-font-size;
     }
@@ -34,7 +34,7 @@
         top:0;
         left:0;
         z-index: -1;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.2s ease-in-out;
         opacity: 85%;
     }
     &--white{
@@ -43,6 +43,14 @@
 
         &::after{
             background-color:$color-white;
+        }
+    }
+    &--green{
+        background-color: $color-primary;
+        color: $color-white;
+
+        &:after{
+            background-color: $color-primary;
         }
     }
     &--animated{
