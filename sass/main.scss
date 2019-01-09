@@ -13,8 +13,10 @@
 @import "pages/home";
 
 // Import Layout
+@import "layout/footer";
 @import "layout/grid";
 @import "layout/header";
+@import "layout/navigation";
 
 // Import Components
 @import "components/bg-video";
