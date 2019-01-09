@@ -13,6 +13,7 @@
         top: 6rem;
         right: 6rem;
         z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .15);
     }
 
     &__background{
@@ -24,8 +25,7 @@
         right: 6.5rem;
         background-image: radial-gradient($color-primary-light, $color-primary-dark);
         z-index: 1000;
-
-        transform: scale(200);
+        transition: transform .7s cubic-bezier(0.86, 0, 0.07, 1);
     }
 
     &__nav{
@@ -33,8 +33,13 @@
         width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        left: 0;
         z-index: 1500;
+
+        // Hidden
+        opacity: 0;
+        transform: translateX(-100%);
+        transition: all .8s cubic-bezier(0.68, -0.55, 0.265, 1.55);
     }
 
     &__list{
@@ -43,6 +48,7 @@
         transform: translate(-50%, -50%);
         list-style: none;
         text-align: center;
+        width: 100%;
     }
 
     &__item{
@@ -60,7 +66,7 @@
             text-transform: uppercase;
             
             background-image: linear-gradient(120deg, transparent 0, transparent 50%, $color-white 50%);
-            background-size: 225%;
+            background-size: 220%;
 
             transition: all .4s;
 
@@ -75,5 +81,13 @@
             color: $color-primary;
             transform: translateX(1rem);
         }
+    }
+
+    &__check-box:checked ~ &__background{
+        transform: scale(80);
+    }
+    &__check-box:checked ~ &__nav{
+        transform: translateX(0);
+        opacity: 1;
     }
 }
