@@ -32,4 +32,10 @@
         transform: translate(-50%,-50%);
         text-align: center;
     }
+
+    // MEDIA QUERY
+    @include respond(phone){    
+        clip-path: polygon(0 0,100% 0,100% 87vh,0 100%);
+        -webkit-clip-path: polygon(0 0,100% 0,100% 87vh,0 100%);
+    }
 }
