@@ -30,6 +30,17 @@
     &__left{
         width: calc(100/3*1%);
         display: table-cell;
+
+        // MEDIA QUERY
+        @include respond(tab-land){
+            overflow: hidden;
+            background-color: $color-black;
+        }
+        @include respond(phone){
+            width:100%;
+            height: 25vh;
+            display: inline-block;
+        }
     }
 
     &__right{
@@ -37,11 +48,27 @@
         display: table-cell;
         vertical-align: middle;
         padding: 3rem 5rem;
+
+        @include respond(phone){
+            padding-top: 1rem;
+        }
     }
 
     &__img{
         display: block;
         width: 100%;
+        
+        // MEDIA QUERY
+        @include respond(tab-land){
+            width: 100%;
+            height: auto;
+        }
+        @include respond(phone){
+            width: 50%;
+            height: auto;
+            display: inline-block;
+            float: left;
+        }
     }
 
     &__text{
@@ -76,7 +103,11 @@
             display: inline-block;
             line-height: .5;
 
-            
+            // MEDIA QUERY
+            @include respond(phone){
+                font-size: 4rem;
+                color: $color-black;
+            }
         }
         &:hover{
             color: $color-primary;
