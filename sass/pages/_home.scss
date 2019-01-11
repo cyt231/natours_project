@@ -25,6 +25,14 @@
     @include respond(tab-port){
         padding: 10rem 0;
     }
+    @include respond(tab-land){
+        background-image: 
+        linear-gradient(
+            to right bottom, 
+            rgba($color-primary-light, 0.8),
+            rgba($color-primary-dark, 0.8)
+        ),url(../img/nat-4-min.jpg);        
+    }
 }
 
 .section-tours{
@@ -77,14 +85,14 @@
             rgba($color-white,.8) 0%, 
             rgba($color-white,.8) 65%, 
             transparent 65%
-            ), url(../img/nat-10.jpg);
+            ), url(../img/nat-10-min.jpg);
     }
     @include respond(tab-port){
         background-image: linear-gradient(
             to right, 
             rgba($color-white,.8) 0%, 
             rgba($color-white,.8) 100%
-            ), url(../img/nat-10.jpg);
+            ), url(../img/nat-10-min.jpg);
     }
 
     &__form{
