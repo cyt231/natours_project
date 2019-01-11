@@ -34,19 +34,20 @@ BASE + TYPOGRAPHY > GENERAL LAYOUT + GRID > PAGE LAYOUT > CONTENT
 @mixin respond ($breakpoint){
     // phone - 600px
     @if $breakpoint == phone { 
-        @media(max-width: 37.5em) {@content}; 
+        @media only screen and (max-width: 37.5em) {@content}; 
     };
     // phone - 900px
+    // Components > Card (need touch verification)
     @if $breakpoint == tab-port { 
-        @media(max-width: 56.25em) {@content}; 
+        @media only screen and (max-width: 56.25em) {@content}; 
     };
     // phone - 1200px
     @if $breakpoint == tab-land { 
-        @media(max-width: 75em) {@content}; 
+        @media only screen and (max-width: 75em) {@content}; 
     };
     // phone - 1800px
     @if $breakpoint == big-desktop { 
-        @media(min-width: 112.5em) {@content}; 
+        @media only screen and (min-width: 112.5em) {@content}; 
     };
 
 }
