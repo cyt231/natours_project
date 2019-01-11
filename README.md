@@ -25,5 +25,8 @@ Compile and compress main.sass
 natours_project> npm run build:css
 ```
 
-### Icons used:
-http://linea.io/
+### Media content:
+
+*Icons: [Linea](http://linea.io/)
+*Images: [Unsplash](https://unsplash.com/)
+*Backgorund Video: [Coverr](http://www.coverr.co)
