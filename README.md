@@ -12,7 +12,19 @@ You can compile the SASS files using NodeJS, you can get the dependencies using:
 ```
 natours_project> npm install
 ```
-To compile SASS:
+To Watch Modification in CSS:
+```
+natours_project> npm run watch:sass
+``` 
+To compile Compact SASS:
 ```
 natours_project> npm run compile:sass
 ``` 
+To Concat CSS:
+```
+natours_project> npm run concat:css
+``` 
+
+
+### Icons used:
+http://linea.io/
