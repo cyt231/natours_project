@@ -27,8 +27,6 @@ natours_project> npm run build:css
 
 ### Media content:
 
-*Icons: [Linea](http://linea.io/)
-
-*Images: [Unsplash](https://unsplash.com/)
-
-*Backgorund Video: [Coverr](http://www.coverr.co)
+* Icons: [Linea](http://linea.io/)
+* Images: [Unsplash](https://unsplash.com/)
+* Backgorund Video: [Coverr](http://www.coverr.co)
