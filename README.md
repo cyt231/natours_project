@@ -6,25 +6,24 @@ Natours Projects is a project to focus on create a web site using advanced CSS a
 
 All CSS files are already compile and all SASS files is in the SASS Folder.
 
-### How to compile
+### NPM SCRIPTS
 
-You can compile the SASS files using NodeJS, you can get the dependencies using:
+Install all dependence using nodeJS NPM (packge.json)
 ```
 natours_project> npm install
 ```
-To Watch Modification in CSS:
+Compile SASS and Watch
 ```
 natours_project> npm run watch:sass
-``` 
-To compile Compact SASS:
 ```
-natours_project> npm run compile:sass
-``` 
-To Concat CSS:
+Start a live server and compile SASS Watcher
 ```
-natours_project> npm run concat:css
-``` 
-
+natours_project> npm run start
+```
+Compile and compress main.sass
+```
+natours_project> npm run build:css
+```
 
 ### Icons used:
 http://linea.io/
