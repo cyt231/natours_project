@@ -5,11 +5,18 @@
     top: 0;
     left: 0;
     z-index: 4000;
-    background-color: rgba($color-black,.80);
+    background-color: rgba($color-black,.8);
     display:table;
     transition: all .5s;
     opacity: 0;
     visibility: hidden;
+    
+    
+    @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        background-color: rgba($color-black,.2);
+    }
 
     &__content{
         @include absCenter;
