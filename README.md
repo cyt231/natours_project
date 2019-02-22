@@ -1,4 +1,4 @@
-# [Natours Project](https://github.com/cytsuda/natours_project)
+# [Natours Project](https://cytsuda.github.io/natours_project/)
 
 Natours Projects is a project to focus on create a web site using advanced CSS and SASS.
 
