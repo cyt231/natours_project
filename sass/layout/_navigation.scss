@@ -1,4 +1,12 @@
 .navigation{
+    // Truque da Checkbox
+    // Esse é um truque que utiliza o pseudo-seletor (:checked) para criar um elo que influencia os parentes do objeto selecionado.
+    // O menu de navegação é composto por 4 componentes:
+    // 1. Input (element) - Esse é o componente que cria o truque
+    // 2. Button (botão) - É a label da checkbox
+    // 3. Navigation Background - é  uma div que está posicionada atrás do botão, escondida
+    // 4. Navigation Itens - são os itens de navegação que estão invisiveis
+    // Obs: essa não é a forma mais correta de criar esse efeito, devido a comportamentos adversos do CSS
     &__check-box{
         display:none;
     }
