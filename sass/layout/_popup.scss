@@ -6,8 +6,7 @@
     left: 0;
     z-index: 4000;
     background-color: rgba($color-black,.8);
-    display:table;
-    transition: all .5s;
+    transition: all .5s .2s;
     opacity: 0;
     visibility: hidden;
     
@@ -21,8 +20,7 @@
     &__content{
         @include absCenter;
         width: 75%;
-        display: block;
-        position: absolute;
+        display: table;
         background-color: $color-white;
         border-radius: 3px;
         box-shadow: 0 2rem 4rem rgba($color-black, .4);
