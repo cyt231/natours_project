@@ -4,7 +4,7 @@ Natours é um projeto focado na criação de um website utilizando conceitos ava
 
 A linguagem pre-processada SASS (SCSS) foi a linguagem escolhida para o desenvolvimento do estilo da página.
 
-Natours é um site projetado para uma Agencia de Turismo **_fictícia_** que tem como público alvo turistas que buscam paisagens paradisiacas (~~hipsters~~)  
+Natours é um site projetado para uma Agencia de Turismo **_fictícia_** que tem como público alvo turistas que buscam paisagens paradisiacas (~~hipsters~~).
 
 ---
 
@@ -60,7 +60,8 @@ O documento é classificado com idioma em Ingles `<html lang="en">`
 ``` 
 ### Body - Corpo do Site
 
-O body é dividido em quatro componentes:
+O body é dividido em cinco componentes:
+
 1. Navegação (Navigation):
 
    - Input (_checkbox_) → Permite acesso a pseudo-seletor `:checked` que permite criar os efeitos responsáveis pelo menu.
@@ -71,12 +72,98 @@ O body é dividido em quatro componentes:
    
    - Nav → O menu de navegação em si, aqui estão listados os tópicos do site.
 
-2. Cabeçalho (header);
+2. Cabeçalho (header):
 
-O cabeçalho ou Header é o componente inicial que tenta captar a atenção do usuário do site. A estratégia utilizada no website Natours é dar vida ao site com o uso de animações sutis 
+   O cabeçalho (Header) é o componente mais ao topo, ele tenta capturar a atenção do usuário do site por meio de um design simples, agradável mas muito rico em informação. A composição do cabeçalho são, basicamente, dois componentes:
+   * Logo branco, esquerda superior;
+   * Corpo do bloco → plano de fundo e textos;
 
-3. Conteúdo princial (Main);
-4. Rodapé (Footer)
+3. Conteúdo princial (Main): 
+
+   Conteúdo do site reforça o padrão do site. Onde o visual, as imagens e as interações são mais atrativas do que os textos (que são ipsum lorem logo sem signficado)
+   
+   O layout do site é bem comum mas se destaca devido os vários efeitos e recursos utilizados para atrair o olhar do usuário.
+
+4. Rodapé (Footer):
+
+   Rodapé é o o último componente visível, ele é extremamente simples e direto. 
+   
+   O motivo da navegação do rodapé ser diferente da navegação principal é para criar um mapa visual diferente do estabelecido pela navegação principal. Esse é um conceito de projeto de layout que ajuda usuários que não entenderam, ou encontraram, o que buscavam apenas com o menu principal.
+
+5. Popup:
+
+   Popup é um componente, que inicialmente, não é visível até ser ativado.
+
+## Documentação - CSS
+
+Metodologia de organização utilizada: Block Element Modifier (BEM).
+
+Linguagem pre processada utilizado: SASS (SCSS)
+
+Arquitetura: 7 -> 1:
+```
+/sass
+   ├── /abstract
+   │     ├── _function.scss
+   │     ├── _mixins.scss
+   │     └── _variables.scss 
+   ├── /base
+   │     ├── _animations.scss
+   │     ├── _base.scss
+   │     ├── _typography.scss 
+   │     └── _utilities.scss 
+   ├── /components
+   │     ├── _bg-video.scss
+   │     ├── _button.scss
+   │     ├── _cards.scss 
+   │     ├── _compositions.scss 
+   │     ├── _feature-box.scss 
+   │     ├── _form.scss 
+   │     └── _story.scss 
+   ├── /layout
+   │     ├── _footer.scss
+   │     ├── _grid.scss
+   │     ├── _header.scss
+   │     ├── _navigation.scss 
+   │     └── _popup.scss 
+   ├── /page 
+   │     └── _home.scss 
+   │  
+   └── main.scss
+
+```
+
+> Duas pasta estão faltando: a themes e a vendors. A themes é pra temas que aplicam acima do layout ou template, a vendors são arquivos externos, frameworks etcs.
+
+### Documentação - CSS - abstract
+
+A seção _abstract_ é exclusiva para qualquer tipo de informação ou código não relacionado com atributos diretos, os três arquivos básicos de todo _abstract_ de qualquer projeto são:
+1. _**Functions**_ - Arquivo vazio nesse projeto, mas basicamente consiste de funções implementadas no SASS.
+2. _**Mixins**_ - um _mixin_ é um conjunto de atributos que podem ser agrupados e reutilizados em outros componentes.
+3. _**Variables**_ - Variáveis, utés para declarar cor, margin e outros atributos que podem ser alterados em blocos, sem a necessidade de recodificar tudo. 
+
+### Documentação - CSS - base
+
+A seção do _base_ é composta de componentes definições básicas do projeto. Essas definições envolvem tipografia, espaçamentos, classes utilitárias, animações etc. A base do projeto Natours pode ser divida em quatro:  
+1. _**Animations**_ - Animações criadas, uma vantagem do SASS é que é possível criar laços lógicos para codificar as animações.
+2. _**Base**_ - As bases do sistema, aqui inclui remoção do espaçamento padrão do HTML, definição das fontes básica (tanto para desktop quanto para mobile **[OBS](#mobile)**).
+3. _**Typography**_ - São as definições tipográfica da página, que inclui:
+   * Font-family: a familia da fonte ou o estilo da fonte
+   * Font-size: tamanho da fonte;
+   * Formatação de cabeçalhos (h1,h2,h3,h4,h5,h6) e paragrafos (p);
+4. _**Utilities**_ - São classes utilitárias que tem uma unica função, em geral são responsáveis pela margin ou outras propriedades ou outros conjuntos de propriedades.  
+
+### Documentação - CSS - components
+
+_Compoents_ são os componentes implementados para o site. Esses componentes devem ser versáteis, reusáveis e flexíveis. Os componentes criados nesse projeto foram:
+1. _**bg_video**_ - Background video. Esse componente transforma o elemento que ele estiver vinculado em um plano de fundo do tamanho de seu componente _"pai"_, extremamente util e reusável.
+2. _**Button**_ - São todos os botões criados:
+
+```css
+.btn, .btn--green, .btn--white, .btn--animated & .btn--text
+```
+
+
 
 ## CSS Popup/Modal Trick
 
@@ -112,3 +199,15 @@ Menu de navegação é composto por 4 componentes:
 4. Navigation Itens - são os itens de navegação que estão invisiveis
 
 > Obs: essa não é a forma mais correta de criar esse efeito, devido a comportamentos adversos do CSS
+
+# Mobile
+
+O design e a responsividade do Natours está ruim, o que falta no site para responsividade ser considerada aceitável:
+
+- [ ] Layout Ajustar com o Tamanho da tela;
+- [ ] Os textos se ajustarem com o tamanho da tela;
+- [ ] Alterar a imagem exibida com base na taxa de pixel da tela;
+- [ ] Alterar a imagem exibida com base no tamanho da tela;
+- [ ] Remover as interações por mouse quando o dispositivo for touch;
+- [ ] Adicionar as interações e estímulos quando o dispositivo for touch;
+- [ ] Aumentar a performace do site em dispositivos mobile removendo efeitos desnecessários;
