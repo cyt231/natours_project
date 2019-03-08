@@ -1,3 +1,6 @@
+// Mixin para clearfix
+// Ocasionalmente ocorre algo que não compreendo em totalidade e as vezes, quando utiliza-se float-box, aparece espaçamentos fantasmas que alteram o layout da página. A função do clearfix é remover esses espaçamento, caso ocorra 
+// Claro que é necessário realizar a chamada do clearfix na função que aparesenta o problema.
 @mixin clearfix{
     &:after{
         content: "";

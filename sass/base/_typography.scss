@@ -10,9 +10,10 @@ body{
     color: $color-white;
     text-transform: uppercase;
     margin-bottom: 6rem;
-
+    
     /* Sometimes appears some shake */
-    /* backface-visibility: hidden; */
+    backface-visibility: hidden;
+
     &--main{
         display:block;
         font-size: 6rem;
@@ -36,7 +37,9 @@ body{
         font-weight: 700;
         letter-spacing: 1.75rem;
 
-        animation:  moveInRight 1s ease-in-out;
+        animation-name:  moveInRight;
+        animation-duration: 1s;
+        animation-timing-function: ease-in-out;
 
         @include respond(phone){
             letter-spacing: .5rem;
