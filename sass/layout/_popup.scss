@@ -8,7 +8,7 @@
     left: 0;
     z-index: 4000;
     background-color: rgba($color-black,.8);
-    transition: all .5s .2s;
+    transition: all .5s 0.01s;
     
     
     @supports(-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)){
