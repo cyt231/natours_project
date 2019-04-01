@@ -19,12 +19,15 @@ body{
         font-size: 6rem;
         font-weight: 400;
         letter-spacing: 3.5rem;
-        
-        animation-name: moveInLeft;
-        animation-duration: 1s; 
-        animation-timing-function: ease-in-out;
-        /* animation-delay: 3s; animation-iteration-count: 3; */
+        opacity: 0;
 
+        &.animation{
+            animation-name: moveInLeft;
+            opacity:1;
+            animation-duration: 1s; 
+            animation-timing-function: ease-in-out;
+            /* animation-delay: 3s; animation-iteration-count: 3; */
+        }
         // MEDIA QUERY
         @include respond(phone){
             letter-spacing: 1rem;
@@ -36,11 +39,14 @@ body{
         font-size: 2rem;
         font-weight: 700;
         letter-spacing: 1.75rem;
+        opacity: 0;
 
-        animation-name:  moveInRight;
-        animation-duration: 1s;
-        animation-timing-function: ease-in-out;
-
+        &.animation{
+            animation-name:  moveInRight;
+            opacity:1;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out;
+        }
         @include respond(phone){
             letter-spacing: .5rem;
         }

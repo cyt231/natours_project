@@ -62,7 +62,7 @@
     &__img{
         display: block;
         width: 100%;
-        
+        opacity: inherit;
         // MEDIA QUERY
         @include respond(tab-land){
             width: 100%;
